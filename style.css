@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Graph paper background */
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #1c2b27;
+  background-color: #eef3ec;
+  background-image:
+    linear-gradient(#cfdccf 1px, transparent 1px),
+    linear-gradient(90deg, #cfdccf 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Chalkboard header */
+header {
+  background: #0f3d3e;
+  color: #f4efd8;
+  text-align: center;
+  padding: 28px 15px 22px;
+  border-bottom: 6px solid #d4a017;
+}
+
+header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  letter-spacing: 6px;
+}
+
+/* Navigation as folder tabs */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 800px;
+  margin: 24px auto 0;
+  padding: 0 15px;
+}
+
+nav button {
+  background: #cfdccf;
+  color: #0f3d3e;
+  border: 2px solid #0f3d3e;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 10px 16px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #e3ecd9;
+}
+
+nav button.active {
+  background: #ffffff;
+  position: relative;
+  top: 2px;
+  box-shadow: 0 -4px 0 #d4a017 inset;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  padding: 0 15px;
+}
+
+/* Tabs: hidden by default, only the active one shows */
+.tab {
+  display: none;
+  background: #ffffff;
+  padding: 24px;
+  border: 2px solid #0f3d3e;
+  border-radius: 0 14px 14px 14px;
+}
+
+.tab.active {
+  display: block;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  color: #0f3d3e;
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 3px double #d4a017;
+}
+
+/* Home tab */
+#home {
+  background: #0f3d3e;
+  color: #f4efd8;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#home h2 {
+  color: #d4a017;
+  font-size: 30px;
+  border-bottom: none;
+}
+
+#home p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+#homePhoto {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #d4a017;
+  margin-bottom: 15px;
+}
+
+/* Form */
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: bold;
+  color: #0f3d3e;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #9fb5a8;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fbfdf9;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #d4a017;
+  background: #fffdf2;
+}
+
+.submit-btn {
+  margin-top: 22px;
+  padding: 12px 24px;
+  background: #d4a017;
+  color: #0f3d3e;
+  border: 2px solid #0f3d3e;
+  border-radius: 6px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #0f3d3e;
+}
+
+.submit-btn:hover {
+  background: #e6b422;
+}
+
+.submit-btn:active {
+  box-shadow: 1px 1px 0 #0f3d3e;
+  transform: translate(3px, 3px);
+}
+
+/* Messages */
+#message {
+  padding: 12px;
+  border-radius: 6px;
+  display: none;
+  font-weight: bold;
+}
+
+#message.success {
+  display: block;
+  background: #dff3e4;
+  color: #14532d;
+  border-left: 6px solid #22863a;
+}
+
+#message.error {
+  display: block;
+  background: #fde8e8;
+  color: #7f1d1d;
+  border-left: 6px solid #c53030;
+}
+
+/* Records table */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #cfdccf;
+}
+
+th {
+  background: #0f3d3e;
+  color: #f4efd8;
+  font-family: Georgia, serif;
+}
+
+tbody tr:nth-child(even) {
+  background: #f1f6ef;
+}
+
+tbody tr:hover {
+  background: #fff6d6;
+}
+
+td:last-child {
+  font-weight: bold;
+  color: #0f3d3e;
+}
+
+/* Small screens */
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+  nav button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
